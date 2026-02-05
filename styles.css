@@ -487,9 +487,23 @@ a {
 }
 
 .examples {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+}
+
+.proof-card {
+  background: rgba(20, 26, 50, 0.6);
+  border: 1.5px solid rgba(0, 102, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.6rem;
+  box-shadow: var(--shadow-md);
 }
 
 .timeline {
@@ -534,9 +548,23 @@ a {
 }
 
 .cap-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.faq-item {
+  background: rgba(20, 26, 50, 0.6);
+  border: 1.5px solid rgba(0, 102, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.6rem;
+  box-shadow: var(--shadow-md);
 }
 
 .icon-chip {
@@ -623,10 +651,29 @@ a {
 }
 
 .site-footer {
-    border-top: 1px solid var(--border-subtle);
-    padding: 2rem 0;
-    color: var(--text-muted);
-    background: rgba(10, 13, 26, 0.95);
+  border-top: 1px solid var(--border-subtle);
+  padding: 2rem 0;
+  color: var(--text-muted);
+  background: rgba(10, 13, 26, 0.95);
+}
+
+.ticker {
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(10, 13, 26, 0.9);
+  overflow: hidden;
+  padding: 0.8rem 0;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 2.5rem;
+  width: max-content;
+  animation: ticker 24s linear infinite;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
 }
 
 .footer {
@@ -648,12 +695,21 @@ a {
 }
 
 @keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes float {
