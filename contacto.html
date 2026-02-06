@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Contacto DevsManager: agenda una consulta para implementar IA, automatizacion y sistemas web en tu negocio." />
+    <title>Contacto | DevsManager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/contacto.css" />
+    <link rel="icon" href="icono.png" />
+  </head>
+  <body data-page="contacto">
+    <div data-include="header"></div>
+
+    <main>
+      <section class="page-hero">
+        <div class="container" data-reveal>
+          <span class="kicker">Contacto</span>
+          <h1>Cuentame tu reto y te propongo una ruta de implementacion clara</h1>
+          <p>
+            Si quieres automatizar procesos o integrar IA en tu negocio, empecemos por una llamada corta para priorizar lo que mas retorno puede darte.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-layout">
+          <article class="contact-card card" data-reveal>
+            <h2 class="card-title-lg">Canales directos</h2>
+            <p>Respondo personalmente para revisar alcance, tiempos y siguiente paso recomendado.</p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/593959186832" target="_blank" rel="noopener">+593 95 918 6832</a>
+              </div>
+              <div class="contact-item">
+                <strong>Email</strong>
+                <a href="mailto:jefersonalvarez009@gmail.com">jefersonalvarez009@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <strong>Ubicacion</strong>
+                <span>Quito, Ecuador</span>
+              </div>
+            </div>
+
+            <div class="mt-lg">
+              <a class="btn btn-whatsapp" href="https://wa.me/593959186832" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>
+                Iniciar conversacion ahora
+              </a>
+            </div>
+          </article>
+
+          <article class="contact-form card" data-reveal>
+            <h2 class="card-title-lg">Brief rapido</h2>
+            <p>Completa este formulario y generamos el mensaje listo para WhatsApp.</p>
+
+            <form id="contact-form" class="form-grid">
+              <div class="two-col">
+                <div class="form-field">
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+                </div>
+                <div class="form-field">
+                  <label for="negocio">Negocio</label>
+                  <input id="negocio" name="negocio" type="text" placeholder="Nombre de tu negocio" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="objetivo">Objetivo principal</label>
+                <input id="objetivo" name="objetivo" type="text" placeholder="Ej: automatizar cotizaciones por WhatsApp" required />
+              </div>
+
+              <div class="form-field">
+                <label for="prioridad">Prioridad</label>
+                <select id="prioridad" name="prioridad">
+                  <option value="">Selecciona una opcion</option>
+                  <option value="Urgente (esta semana)">Urgente (esta semana)</option>
+                  <option value="Este mes">Este mes</option>
+                  <option value="Planificado (1-2 meses)">Planificado (1-2 meses)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="detalles">Detalles adicionales</label>
+                <textarea id="detalles" name="detalles" placeholder="Cuentame brevemente tu proceso actual y que quieres mejorar"></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+                <a class="btn btn-secondary" href="mailto:jefersonalvarez009@gmail.com">Enviar por email</a>
+              </div>
+              <p class="form-note">Recibiras una respuesta con siguiente paso recomendado.</p>
+              <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="footer"></div>
+
+    <script src="assets/js/layout.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/contacto.js" defer></script>
+  </body>
+</html>

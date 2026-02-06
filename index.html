@@ -1,430 +1,169 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="DevsManager: soluciones tecnológicas, IA, automatización, sistemas web y apps para negocios en Quito y Ecuador." />
-    <meta name="keywords" content="automatización, IA, agentes inteligentes, sistemas web, apps móviles, integración, Quito, Ecuador" />
+    <meta name="description" content="DevsManager: IA, automatizacion y sistemas web a medida para negocios que quieren vender mejor y operar con menos friccion." />
+    <meta name="keywords" content="agentes de IA, automatizacion, sistemas web, WhatsApp, Quito, Ecuador" />
     <meta name="author" content="Jefferson - DevsManager" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0a0d1a" />
-    <meta property="og:title" content="DevsManager | Soluciones tecnológicas e IA" />
-    <meta property="og:description" content="Automatización, IA y sistemas web a medida para negocios que quieren crecer." />
+    <meta name="theme-color" content="#070c1f" />
+    <meta property="og:title" content="DevsManager | IA aplicada para negocios" />
+    <meta property="og:description" content="Diseno e implemento automatizaciones, agentes de IA y sistemas web orientados a resultados." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_EC" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>DevsManager | Agentes de IA y Automatización</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>DevsManager | IA y Automatizacion para negocios</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="icon" href="https://em-content.zobj.net/source/twitter/348/robot_1f916.png" />
-</head>
-
-<body>
-    <div class="bg-particles"></div>
-
-    <header class="site-header" id="top">
-        <div class="container nav">
-            <div class="brand">
-                <img class="brand-icon" src="icono.png" alt="DevsManager" />
-                <span class="brand-name">DevsManager</span>
-            </div>
-            <nav class="menu">
-                <a href="#hero">Inicio</a>
-                <a href="#about">Quién soy</a>
-                <a href="#services">Servicios</a>
-                <a href="#benefits">Beneficios</a>
-                <a href="#examples">Ejemplos</a>
-                <a href="#process">Proceso</a>
-                <a href="#capabilities">Capacidades</a>
-                <a href="#contact">Contacto</a>
-            </nav>
-            <a class="btn btn-whatsapp" href="https://wa.me/593959186832" target="_blank" rel="noopener">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-        </div>
-    </header>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="icon" href="icono.png" />
+  </head>
+  <body data-page="index">
+    <div data-include="header"></div>
 
     <main>
-        <section class="hero" id="hero">
-            <div class="hero-video-wrap">
-                <!-- Descarga un video de Pexels y reemplaza el archivo local en /videos/ai-hero.mp4 -->
-                <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80">
-          <source src="videos/ai-hero.mp4" type="video/mp4" />
-        </video>
-                <div class="hero-video-overlay"></div>
+      <section class="page-hero home-hero">
+        <div class="container home-hero-grid">
+          <div class="hero-copy" data-reveal>
+            <span class="kicker">Tu negocio puede operar mejor</span>
+            <h1>
+              Construyo
+              <span class="hero-highlight" id="hero-rotating-text">agentes de IA</span>
+              que trabajan contigo 24/7
+            </h1>
+            <p>
+              Transformo procesos repetitivos en flujos automatizados con impacto real:
+              respuestas mas rapidas, menos carga operativa y una experiencia mas clara para tus clientes.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="contacto.html">Quiero una propuesta</a>
+              <a class="btn btn-secondary" href="servicios.html">Ver servicios</a>
             </div>
 
-            <div class="container hero-grid">
-                <div class="hero-copy">
-                    <p class="eyebrow">Freelancer experto para negocios que quieren crecer</p>
-                    <h1>Agentes de IA y automatización para negocios</h1>
-                    <p class="lead">Soluciones que trabajan por ti 24/7: WhatsApp, documentos y procesos conectados para ahorrar tiempo y vender más.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="https://wa.me/593959186832" target="_blank" rel="noopener">
-              Agenda una consulta gratuita
+            <div class="kpi-grid">
+              <article class="kpi">
+                <strong data-counter="24">0</strong>
+                <span>horas de atencion automatizada</span>
+              </article>
+              <article class="kpi">
+                <strong data-counter="40">0</strong>
+                <span>porcentaje potencial de ahorro operativo</span>
+              </article>
+              <article class="kpi">
+                <strong data-counter="7">0</strong>
+                <span>dias para tener un MVP funcional</span>
+              </article>
+            </div>
+          </div>
+
+          <article class="hero-panel card" data-reveal>
+            <div class="panel-top" aria-hidden="true">
+              <span class="panel-dot"></span>
+              <span class="panel-dot"></span>
+              <span class="panel-dot"></span>
+            </div>
+            <img class="panel-image" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80" alt="Panel de automatizacion e inteligencia artificial" />
+            <div class="chat-block">
+              <p class="chat-bubble">Cliente: Necesito una cotizacion hoy mismo.</p>
+              <p class="chat-bubble agent">Agente IA: Listo. Ya prepare tu PDF y agenda de seguimiento.</p>
+              <p class="chat-bubble agent">Agente IA: Tambien enviamos recordatorio automatico al equipo comercial.</p>
+            </div>
+            <p class="hero-note">Menos tareas manuales, mas foco en ventas y estrategia.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <span class="kicker">Soluciones principales</span>
+            <h2>Tu sistema digital, alineado a tus metas de negocio</h2>
+            <p>No se trata de tener mas herramientas. Se trata de conectar las correctas con una logica clara que genere resultados medibles.</p>
+          </header>
+
+          <div class="service-overview-grid">
+            <article class="service-card card" data-reveal>
+              <div class="icon-chip"><i class="fa-solid fa-brain"></i></div>
+              <h3>Agentes de IA orientados a conversion</h3>
+              <p>Asistentes conectados a tu operacion real para responder, clasificar y dar seguimiento sin perder contexto.</p>
+              <a href="servicios.html">Ver detalle</a>
+            </article>
+            <article class="service-card card" data-reveal>
+              <div class="icon-chip"><i class="fa-solid fa-gears"></i></div>
+              <h3>Automatizacion de procesos internos</h3>
+              <p>Integro WhatsApp, formularios, CRM, correo y documentos para eliminar pasos manuales y errores recurrentes.</p>
+              <a href="servicios.html">Ver detalle</a>
+            </article>
+            <article class="service-card card" data-reveal>
+              <div class="icon-chip"><i class="fa-solid fa-laptop-code"></i></div>
+              <h3>Sistemas web y experiencia UX</h3>
+              <p>Desarrollo paginas y paneles con enfoque en claridad, conversion y velocidad para equipos y clientes.</p>
+              <a href="servicios.html">Ver detalle</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <span class="kicker">Forma de trabajo</span>
+            <h2>Ejecucion simple, resultados concretos</h2>
+            <p>Trabajo contigo de forma directa para definir prioridades, construir rapido y optimizar con datos de uso reales.</p>
+          </header>
+
+          <div class="step-mini-grid">
+            <article class="step-mini card" data-reveal>
+              <strong>1</strong>
+              <h3>Analisis inicial</h3>
+              <p>Mapeo cuellos de botella y detecto donde la automatizacion entrega retorno primero.</p>
+            </article>
+            <article class="step-mini card" data-reveal>
+              <strong>2</strong>
+              <h3>Arquitectura</h3>
+              <p>Diseno flujo tecnico y experiencia de usuario para que la solucion sea adoptada por tu equipo.</p>
+            </article>
+            <article class="step-mini card" data-reveal>
+              <strong>3</strong>
+              <h3>Implementacion</h3>
+              <p>Desarrollo, conecto sistemas, pruebo escenarios reales y documento el uso operativo.</p>
+            </article>
+            <article class="step-mini card" data-reveal>
+              <strong>4</strong>
+              <h3>Mejora continua</h3>
+              <p>Monitoreo rendimiento, itero flujos y escalo capacidades en funcion de resultados.</p>
+            </article>
+          </div>
+
+          <div class="cta-band" data-reveal>
+            <p><strong>Lema:</strong> "Menos tareas repetitivas. Mas decisiones inteligentes."</p>
+            <a class="btn btn-whatsapp" href="https://wa.me/593959186832" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i>
+              Hablar por WhatsApp
             </a>
-                        <a class="btn btn-ghost" href="#services">Ver servicios</a>
-                    </div>
-                    <div class="hero-tags">
-                        <span>Agentes de IA</span>
-                        <span>Automatización</span>
-                        <span>Web estratégica</span>
-                    </div>
-                    <div class="marquee" aria-hidden="true">
-                        <div class="marquee-track">
-                            <span>IA aplicada</span>
-                            <span>WhatsApp 24/7</span>
-                            <span>Automatización</span>
-                            <span>Procesos claros</span>
-                            <span>Ventas inteligentes</span>
-                            <span>IA aplicada</span>
-                            <span>WhatsApp 24/7</span>
-                            <span>Automatización</span>
-                            <span>Procesos claros</span>
-                            <span>Ventas inteligentes</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-visual">
-                    <div class="hero-card">
-                        <div class="card-top">
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                        <img class="hero-image" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" alt="Agente de IA para negocios" />
-                        <div class="card-body">
-                            <p class="card-title">Ejemplo en vivo</p>
-                            <p class="chat-label">Cliente vs Agente IA</p>
-                            <div class="chat">
-                                <div class="bubble user"><span class="tag">Cliente</span>Hola, necesito una cotización.</div>
-                                <div class="bubble bot"><span class="tag">Agente IA</span>Perfecto. Estoy generando tu documento y te lo envío en minutos.</div>
-                                <div class="bubble bot"><span class="tag">Agente IA</span>Listo. Aquí tienes tu PDF y los pasos siguientes.</div>
-                            </div>
-                            <p class="card-foot">Automático, claro y sin intervención humana.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-glow"></div>
-            <div class="scroll-indicator">Desliza</div>
-        </section>
-
-        <section class="section section-alt" id="about">
-            <div class="container split">
-                <div>
-                    <h2>Quién soy</h2>
-                    <p>Soy <strong>Jefferson</strong>, freelancer experto en automatización, inteligencia artificial y desarrollo web. Trabajo directo contigo, sin intermediarios, para crear soluciones reales y personalizadas.</p>
-                    <p>Mi enfoque es consultivo: primero entiendo tu negocio, luego diseño la solución que de verdad reduce tareas manuales y mejora resultados.</p>
-                    <div class="about-badges">
-                        <span class="badge">Consultor tecnológico</span>
-                        <span class="badge">Proyectos a medida</span>
-                        <span class="badge">Resultados medibles</span>
-                    </div>
-                </div>
-                <div class="about-card">
-                    <img class="section-image" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80" alt="Profesional trabajando con tecnología" />
-                    <h3>Lo que sí hago</h3>
-                    <ul class="list">
-                        <li>Digitalizar procesos clave y ordenarlos</li>
-                        <li>Conectar WhatsApp con flujos reales</li>
-                        <li>Implementar agentes de IA con propósito</li>
-                        <li>Crear webs que convierten</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="services">
-            <div class="container">
-                <h2>Servicios principales</h2>
-                <p class="section-lead">Soluciones tecnológicas integrales para que tu negocio opere mejor, más rápido y con menos esfuerzo.</p>
-                <div class="grid-3">
-                    <article class="service-card reveal">
-                        <div class="service-media">
-                            <img src="https://images.unsplash.com/photo-1655635643486-a17bc48771ff?w=600&q=80" alt="Chip de IA" />
-                        </div>
-                        <h3>Agentes de IA</h3>
-                        <p>Agentes inteligentes conectados a tus procesos. No es un chatbot simple: es una pieza real del negocio.</p>
-                        <ul class="list">
-                            <li>Atención por WhatsApp y chat 24/7</li>
-                            <li>Clasificación de mensajes y solicitudes</li>
-                            <li>Generación automática de documentos</li>
-                            <li>Seguimiento de clientes</li>
-                        </ul>
-                    </article>
-                    <article class="service-card reveal">
-                        <div class="service-media">
-                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80" alt="Automatización de procesos" />
-                        </div>
-                        <h3>Automatización</h3>
-                        <p>Elimina tareas repetitivas para que tu equipo se enfoque en lo importante.</p>
-                        <ul class="list">
-                            <li>Flujos internos claros y escalables</li>
-                            <li>Conexión entre sistemas y bases de datos</li>
-                            <li>Menos errores humanos, más control</li>
-                            <li>Procesos medibles y ordenados</li>
-                        </ul>
-                    </article>
-                    <article class="service-card reveal">
-                        <div class="service-media">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Dashboard web estratégico" />
-                        </div>
-                        <h3>Web estratégica</h3>
-                        <p>One Page pensada para convertir. Tu web no solo informa: trabaja para ti.</p>
-                        <ul class="list">
-                            <li>Diseño UX/UI moderno</li>
-                            <li>Enfoque en ventas y contactos</li>
-                            <li>Integración con WhatsApp e IA</li>
-                            <li>Contenido claro y persuasivo</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section dark" id="benefits">
-            <div class="container">
-                <h2>Beneficios reales para tu negocio</h2>
-                <div class="benefits">
-                    <div class="benefit reveal">
-                        <h3>Menos trabajo manual</h3>
-                        <p>Tu operación se vuelve más rápida y consistente, sin depender de tareas repetitivas.</p>
-                    </div>
-                    <div class="benefit reveal">
-                        <h3>Atención 24/7</h3>
-                        <p>Respuestas inmediatas para tus clientes, incluso fuera de horario.</p>
-                    </div>
-                    <div class="benefit reveal">
-                        <h3>Procesos claros</h3>
-                        <p>Todo queda ordenado, medible y listo para escalar.</p>
-                    </div>
-                    <div class="benefit reveal">
-                        <h3>Más ventas</h3>
-                        <p>Con una web estratégica y un flujo inteligente, los contactos se convierten.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt" id="proof">
-            <div class="container">
-                <h2>Resultados que se notan</h2>
-                <p class="section-lead">Procesos más rápidos, menos errores y mayor claridad en la operación diaria.</p>
-                <div class="proof-grid">
-                    <div class="proof-card">
-                        <h3>Tiempo optimizado</h3>
-                        <p>Automatizaciones que reducen tareas repetitivas y liberan horas de trabajo.</p>
-                    </div>
-                    <div class="proof-card">
-                        <h3>Mejor atención</h3>
-                        <p>Respuestas inmediatas y seguimiento constante sin depender de horarios.</p>
-                    </div>
-                    <div class="proof-card">
-                        <h3>Datos ordenados</h3>
-                        <p>Información centralizada para tomar decisiones con confianza.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt" id="examples">
-            <div class="container">
-                <h2>Ejemplos de uso</h2>
-                <div class="examples">
-                    <div class="example-card reveal">
-                        <h3>Agente de cotizaciones</h3>
-                        <p>Cliente pide una cotización, el agente la genera, envía PDF y registra el seguimiento automáticamente.</p>
-                    </div>
-                    <div class="example-card reveal">
-                        <h3>Soporte en WhatsApp</h3>
-                        <p>Respuestas claras y rápidas, con escalamiento humano solo cuando es necesario.</p>
-                    </div>
-                    <div class="example-card reveal">
-                        <h3>Onboarding de clientes</h3>
-                        <p>Formulario, contrato y documentación lista en minutos, sin intervención manual.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="process">
-            <div class="container">
-                <h2>Proceso de trabajo</h2>
-                <div class="timeline">
-                    <div class="step reveal">
-                        <span class="step-num">1</span>
-                        <div>
-                            <h3>Diagnóstico</h3>
-                            <p>Analizo tu negocio para entender qué conviene automatizar primero.</p>
-                        </div>
-                    </div>
-                    <div class="step reveal">
-                        <span class="step-num">2</span>
-                        <div>
-                            <h3>Diseño de solución</h3>
-                            <p>Defino el flujo ideal: IA, automatización y web integradas.</p>
-                        </div>
-                    </div>
-                    <div class="step reveal">
-                        <span class="step-num">3</span>
-                        <div>
-                            <h3>Implementación</h3>
-                            <p>Construyo el sistema y lo pruebo con escenarios reales.</p>
-                        </div>
-                    </div>
-                    <div class="step reveal">
-                        <span class="step-num">4</span>
-                        <div>
-                            <h3>Ajustes y soporte</h3>
-                            <p>Optimizamos para tu realidad y dejamos todo funcionando.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt" id="capabilities">
-            <div class="container">
-                <h2>Capacidades completas</h2>
-                <p class="section-lead">Trabajo proyectos a medida combinando software, automatización e integración para lograr resultados reales.</p>
-                <div class="cap-grid">
-                    <div class="cap-card reveal">
-                        <div class="icon-chip"><i class="fa-solid fa-brain"></i></div>
-                        <h3>IA aplicada</h3>
-                        <p>Soluciones inteligentes que mejoran la atención, el análisis y la toma de decisiones.</p>
-                    </div>
-                    <div class="cap-card reveal">
-                        <div class="icon-chip"><i class="fa-solid fa-gear"></i></div>
-                        <h3>Automatización</h3>
-                        <p>Procesos conectados para reducir tareas manuales y acelerar resultados.</p>
-                    </div>
-                    <div class="cap-card reveal">
-                        <div class="icon-chip"><i class="fa-solid fa-globe"></i></div>
-                        <h3>Sistemas web</h3>
-                        <p>Plataformas a medida para operar, vender y gestionar con claridad.</p>
-                    </div>
-                    <div class="cap-card reveal">
-                        <div class="icon-chip"><i class="fa-solid fa-mobile-screen"></i></div>
-                        <h3>Aplicaciones móviles</h3>
-                        <p>Experiencias móviles modernas para clientes y equipos internos.</p>
-                    </div>
-                    <div class="cap-card reveal">
-                        <div class="icon-chip"><i class="fa-solid fa-bolt"></i></div>
-                        <h3>Integraciones</h3>
-                        <p>Conecto plataformas y herramientas para que todo trabaje junto.</p>
-                    </div>
-                    <div class="cap-card reveal">
-                        <div class="icon-chip"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3>Optimización y soporte</h3>
-                        <p>Mejora continua, soporte y evolución del sistema.</p>
-                    </div>
-                    <div class="cap-card reveal">
-                        <div class="icon-chip"><i class="fa-solid fa-layer-group"></i></div>
-                        <h3>Soluciones empresariales</h3>
-                        <p>Herramientas internas, gestión de procesos y paneles con métricas claras.</p>
-                    </div>
-                    <div class="cap-card reveal">
-                        <div class="icon-chip"><i class="fa-solid fa-database"></i></div>
-                        <h3>Datos y reporting</h3>
-                        <p>Información centralizada para medir, decidir y crecer.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="faq">
-            <div class="container">
-                <h2>Preguntas frecuentes</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3>¿Trabajas con negocios pequeños y medianos?</h3>
-                        <p>Sí. Las soluciones se ajustan al tamaño y presupuesto de tu negocio.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>¿Puedo empezar por algo simple?</h3>
-                        <p>Claro. Podemos iniciar con una parte específica y escalar luego.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>¿Qué necesito para comenzar?</h3>
-                        <p>Una breve reunión para entender tu proceso y definir prioridades.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section contact" id="contact">
-            <div class="container contact-grid">
-                <div>
-                    <h2>¿Listo para automatizar tu negocio?</h2>
-                    <p>Cuéntame tu caso y armamos la mejor solución. Respondo personalmente.</p>
-                    <div class="contact-info">
-                        <p><strong>Ubicación:</strong> Quito, Ecuador</p>
-                        <p><strong>WhatsApp:</strong> 0959186832</p>
-                        <p><strong>Email:</strong> jefersonalvarez009@gmail.com</p>
-                    </div>
-                    <a class="btn btn-whatsapp" href="https://wa.me/593959186832" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-whatsapp"></i> Escríbeme por WhatsApp
-                    </a>
-                </div>
-                <div class="contact-card">
-                    <h3>Consulta gratuita</h3>
-                    <p>En una breve llamada detectamos lo que te ahorra más tiempo y dinero.</p>
-                    <ul class="list">
-                        <li>Sin compromiso</li>
-                        <li>Respuesta rápida</li>
-                        <li>Solución a medida</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <section class="ticker" aria-hidden="true">
-        <div class="ticker-track">
-            <span>Automatización inteligente</span>
-            <span>IA aplicada a negocios</span>
-            <span>Integraciones a medida</span>
-            <span>Resultados medibles</span>
-            <span>Automatización inteligente</span>
-            <span>IA aplicada a negocios</span>
-            <span>Integraciones a medida</span>
-            <span>Resultados medibles</span>
-        </div>
-    </section>
+    <div data-include="footer"></div>
 
-    <footer class="site-footer">
-        <div class="container footer">
-            <div>
-                <strong>DevsManager</strong>
-                <p>Automatización • IA • Sistemas • Web • Apps móviles</p>
-            </div>
-            <p>© <span id="year"></span> DevsManager. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="assets/js/layout.js" defer></script>
+    <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/home.js" defer></script>
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "DevsManager",
-            "areaServed": "Quito, Ecuador",
-            "description": "Soluciones tecnológicas, IA y automatización para negocios.",
-            "url": "https://devsmanager.com",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+593959186832",
-                "contactType": "customer service"
-            }
-        }
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "DevsManager",
+        "description": "Automatizacion, agentes de IA y sistemas web para negocios.",
+        "areaServed": "Quito, Ecuador",
+        "telephone": "+593959186832",
+        "url": "https://devsmanager.com"
+      }
     </script>
-</body>
-
+  </body>
 </html>
