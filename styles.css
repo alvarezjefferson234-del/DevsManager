@@ -40,6 +40,13 @@ body {
     overflow-x: hidden;
 }
 
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -737,6 +744,10 @@ a {
 }
 
 @media (max-width: 880px) {
+    .nav {
+        flex-wrap: wrap;
+        row-gap: 0.8rem;
+    }
     .menu {
         position: absolute;
         inset: 64px 4% auto 4%;
@@ -752,6 +763,79 @@ a {
     }
     .menu-toggle {
         display: inline-flex;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: min(1100px, 94%);
+        padding: 0 1rem;
+    }
+
+    .hero {
+        padding: 5.5rem 0 4.5rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(2.2rem, 7vw, 3.2rem);
+    }
+
+    .lead {
+        font-size: 1.05rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-tags {
+        gap: 0.6rem;
+    }
+
+    .hero-card {
+        padding: 1.2rem;
+    }
+
+    .card-foot,
+    .bubble {
+        font-size: 0.85rem;
+    }
+
+    .section {
+        padding: 5.5rem 0;
+    }
+
+    .section h2 {
+        font-size: clamp(2rem, 7vw, 2.8rem);
+    }
+
+    .section-lead {
+        font-size: 1rem;
+    }
+
+    .about-card,
+    .service-card,
+    .example-card,
+    .contact-card,
+    .cap-card,
+    .proof-card,
+    .faq-item {
+        padding: 1.4rem;
+    }
+
+    .service-media img {
+        height: 140px;
+    }
+
+    .contact-grid {
+        gap: 1.4rem;
     }
 }
 
@@ -759,11 +843,102 @@ a {
     .hero {
         padding: 5rem 0 4rem;
     }
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
     .scroll-indicator {
         display: none;
+    }
+
+    .menu {
+        inset: 72px 4% auto 4%;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0.85rem 1.2rem;
+        font-size: 0.98rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+    }
+
+    .hero-tags span {
+        font-size: 0.8rem;
+    }
+
+    .marquee-track,
+    .ticker-track {
+        animation-duration: 20s;
+        font-size: 0.72rem;
+        letter-spacing: 0.8px;
+    }
+
+    .list {
+        font-size: 0.92rem;
+    }
+
+    .step {
+        grid-template-columns: 1fr;
+    }
+
+    .step::before {
+        display: none;
+    }
+
+    .step-num {
+        margin-bottom: 0.6rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 420px) {
+    .brand-name {
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        padding: 4.5rem 0 3.5rem;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(2rem, 8vw, 2.6rem);
+    }
+
+    .hero-tags {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-tags span {
+        width: 100%;
+    }
+
+    .about-badges {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .badge {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto;
+    }
+    .marquee-track,
+    .ticker-track {
+        animation: none;
+    }
+    .btn-primary {
+        animation: none;
+    }
+    .bg-particles {
+        animation: none;
     }
 }
