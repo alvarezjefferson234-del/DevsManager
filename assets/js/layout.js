@@ -1,6 +1,6 @@
 const PARTIALS = {
-  header: "partials/header.html",
-  footer: "partials/footer.html",
+  header: "/partials/header.html",
+  footer: "/partials/footer.html",
 };
 
 const includePartials = async () => {

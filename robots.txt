@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://devsmanager.com/sitemap.xml
+Sitemap: https://devsmanager.netlify.app/sitemap.xml

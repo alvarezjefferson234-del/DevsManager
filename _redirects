@@ -1,0 +1,15 @@
+/index.html /
+/servicios.html /servicios 301!
+/proceso.html /proceso 301!
+/sobre-mi.html /sobre-mi 301!
+/contacto.html /contacto 301!
+
+/servicios/ /servicios 301!
+/proceso/ /proceso 301!
+/sobre-mi/ /sobre-mi 301!
+/contacto/ /contacto 301!
+
+/servicios /servicios.html 200
+/proceso /proceso.html 200
+/sobre-mi /sobre-mi.html 200
+/contacto /contacto.html 200
