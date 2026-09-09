@@ -1,205 +1,146 @@
 <!doctype html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="DevsManager: IA, automatizacion y sistemas web a medida para negocios que quieren vender mejor y operar con menos friccion." />
-    <meta name="keywords" content="agentes de IA, automatizacion, sistemas web, WhatsApp, Quito, Ecuador" />
+    <meta name="description" content="Haz que tu negocio destaque. En DevsManager creamos páginas que enamoran y soluciones que te dejan más tiempo para crecer." />
+    <meta name="keywords" content="diseño web, páginas para negocios, identidad de marca, DevsManager, Quito Ecuador" />
     <meta name="author" content="Jefferson - DevsManager" />
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-    <meta name="theme-color" content="#070c1f" />
+    <meta name="theme-color" content="#03050a" />
     <link rel="canonical" href="https://devsmanager.netlify.app/" />
-    <link rel="alternate" hreflang="es-EC" href="https://devsmanager.netlify.app/" />
-    <link rel="alternate" hreflang="x-default" href="https://devsmanager.netlify.app/" />
     <meta property="og:site_name" content="DevsManager" />
     <meta property="og:url" content="https://devsmanager.netlify.app/" />
-    <meta property="og:title" content="DevsManager | IA aplicada para negocios" />
-    <meta property="og:description" content="Diseno e implemento automatizaciones, agentes de IA y sistemas web orientados a resultados." />
+    <meta property="og:title" content="DevsManager | Tu marca, imposible de ignorar" />
+    <meta property="og:description" content="Una web que enamora. Clientes bien atendidos. Más tiempo para hacer crecer tu negocio." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_EC" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" />
+    <meta property="og:image" content="https://devsmanager.netlify.app/image.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="DevsManager | IA aplicada para negocios" />
-    <meta name="twitter:description" content="Automatizacion, agentes de IA y sistemas web a medida para crecer sin caos operativo." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" />
-    <title>DevsManager | IA y Automatizacion para negocios</title>
+    <meta name="twitter:title" content="DevsManager | Tu marca, imposible de ignorar" />
+    <meta name="twitter:description" content="Una web que enamora. Clientes bien atendidos. Más tiempo para hacer crecer tu negocio." />
+    <meta name="twitter:image" content="https://devsmanager.netlify.app/image.png" />
+    <title>DevsManager | Tu marca, imposible de ignorar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="icon" href="icono.png" />
-</head>
+  </head>
 
-<body data-page="index">
+  <body data-page="index" class="immersive-home">
+    <a class="skip-experience" href="#capabilities-title">Ir a nuestros servicios</a>
     <div data-include="header"></div>
 
-    <main>
-        <section class="page-hero home-hero">
-            <div class="container home-hero-grid">
-                <div class="hero-copy" data-reveal>
-                    <span class="kicker">Tu negocio puede operar mejor</span>
-                    <h1>
-                        Construyo
-                        <span class="hero-highlight" id="hero-rotating-text">agentes de IA</span> que trabajan contigo 24/7
-                    </h1>
-                    <p>
-                        Transformo procesos repetitivos en flujos automatizados con impacto real: respuestas mas rapidas, menos carga operativa y una experiencia mas clara para tus clientes.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="/contacto">Quiero una propuesta</a>
-                        <a class="btn btn-secondary" href="/servicios">Ver servicios</a>
-                    </div>
+    <div class="webgl-layer" id="webgl-layer" aria-hidden="true">
+      <canvas id="brand-canvas"></canvas>
+    </div>
+    <p class="sr-only" id="scene-status-copy" role="status" aria-live="polite">Preparando la experiencia</p>
+    <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" hidden>Pausar</button>
+    <dialog id="inspection-dialog" aria-labelledby="inspection-title">
+      <header class="inspection-header"><div><span class="eyebrow">CADA DETALLE CUENTA</span><h2 id="inspection-title">DevsManager</h2></div><button id="exit-3d" type="button" autofocus>Volver <span aria-hidden="true">×</span></button></header>
+      <div id="inspection-viewport"><div class="inspection-loading" role="status">Un momento…</div></div>
+      <div class="inspection-dock" id="inspection-dock">
+        <p>Arrastra para mirar alrededor. Acércate y descubre los detalles.</p>
+        <div class="inspection-actions" role="group" aria-label="Elige cómo verlo">
+          <button data-view="front" type="button">Frente</button><button data-view="top" type="button">Arriba</button><button data-view="bottom" type="button">Abajo</button>
+          <button data-view="left" type="button" aria-label="Girar a la izquierda">↶</button><button data-view="right" type="button" aria-label="Girar a la derecha">↷</button>
+          <button data-zoom="in" type="button" aria-label="Acercar">＋</button><button data-zoom="out" type="button" aria-label="Alejar">−</button>
+          <button id="reset-3d" type="button">Vista inicial</button><button id="play-3d" type="button" aria-pressed="false">En movimiento</button>
+        </div>
+      </div>
+    </dialog>
 
-                    <div class="kpi-grid">
-                        <article class="kpi">
-                            <strong data-counter="24">0</strong>
-                            <span>horas de atencion automatizada</span>
-                        </article>
-                        <article class="kpi">
-                            <strong data-counter="40">0</strong>
-                            <span>porcentaje potencial de ahorro operativo</span>
-                        </article>
-                        <article class="kpi">
-                            <strong data-counter="7">0</strong>
-                            <span>dias para tener un MVP funcional</span>
-                        </article>
-                    </div>
-                </div>
-
-                <article class="hero-panel card" data-reveal>
-                    <div class="panel-top" aria-hidden="true">
-                        <span class="panel-dot"></span>
-                        <span class="panel-dot"></span>
-                        <span class="panel-dot"></span>
-                    </div>
-                    <img class="panel-image" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80" alt="Panel de automatizacion e inteligencia artificial" />
-                    <div class="chat-block">
-                        <p class="chat-bubble">Cliente: Necesito una cotizacion hoy mismo.</p>
-                        <p class="chat-bubble agent">Agente IA: Listo. Ya prepare tu PDF y agenda de seguimiento.</p>
-                        <p class="chat-bubble agent">Agente IA: Tambien enviamos recordatorio automatico al equipo comercial.</p>
-                    </div>
-                    <p class="hero-note">Menos tareas manuales, mas foco en ventas y estrategia.</p>
-                </article>
+    <main id="contenido">
+      <section class="scroll-story" id="experiencia" aria-label="Descubre DevsManager">
+        <article class="story-step story-step--intro" id="design-logo" data-asset="logo" aria-labelledby="logo-title">
+          <div class="stage-inner">
+            <header class="stage-header"><div><p class="stage-eyebrow"><span>01 / 03</span> IDENTIDAD</p><h1 id="logo-title">Tu marca.<br /><em>Imposible de ignorar.</em></h1></div><p class="stage-description">Una primera impresión que despierta curiosidad. Una página que muestra lo mejor de ti y da razones para elegirte.</p></header>
+            <div class="scene-slot" data-scene="logo" role="img" aria-label="Emblema luminoso de DevsManager">
+              <img class="slot-poster" src="/posters/logo.png" alt="" fetchpriority="high" />
+              <span class="slot-state">Un momento…</span>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <header class="section-head" data-reveal>
-                    <span class="kicker">Soluciones principales</span>
-                    <h2>Tu sistema digital, alineado a tus metas de negocio</h2>
-                    <p>No se trata de tener mas herramientas. Se trata de conectar las correctas con una logica clara que genere resultados medibles.</p>
-                </header>
-
-                <div class="service-overview-grid">
-                    <article class="service-card card" data-reveal>
-                        <div class="icon-chip"><i class="fa-solid fa-brain"></i></div>
-                        <h3>Agentes de IA orientados a conversion</h3>
-                        <p>Asistentes conectados a tu operacion real para responder, clasificar y dar seguimiento sin perder contexto.</p>
-                        <a href="/servicios">Ver detalle</a>
-                    </article>
-                    <article class="service-card card" data-reveal>
-                        <div class="icon-chip"><i class="fa-solid fa-gears"></i></div>
-                        <h3>Automatizacion de procesos internos</h3>
-                        <p>Integro WhatsApp, formularios, CRM, correo y documentos para eliminar pasos manuales y errores recurrentes.</p>
-                        <a href="/servicios">Ver detalle</a>
-                    </article>
-                    <article class="service-card card" data-reveal>
-                        <div class="icon-chip"><i class="fa-solid fa-laptop-code"></i></div>
-                        <h3>Sistemas web y experiencia UX</h3>
-                        <p>Desarrollo paginas y paneles con enfoque en claridad, conversion y velocidad para equipos y clientes.</p>
-                        <a href="/servicios">Ver detalle</a>
-                    </article>
-                </div>
+            <footer class="stage-footer"><p class="stage-hint">Que te vean. Que te recuerden.</p><div><button class="action action--ghost" id="enter-3d" data-inspect="logo" type="button">Ver de cerca ↗</button><a class="stage-next" href="#design-globe">Sigue descubriendo <span aria-hidden="true">↓</span></a></div></footer>
+            <div class="slot-progress" aria-hidden="true"><i></i></div>
+          </div>
+        </article>
+        <article class="story-step" id="design-globe" data-asset="globe" aria-labelledby="globe-title">
+          <div class="stage-inner">
+            <header class="stage-header"><div><p class="stage-eyebrow"><span>02 / 03</span> CONEXIÓN</p><h2 id="globe-title">Hazte ver.<br /><em>Llega más lejos.</em></h2></div><p class="stage-description">Acerca lo que haces a quienes lo están buscando. Una presencia que invita a conocerte y dar el siguiente paso.</p></header>
+            <div class="scene-slot" data-scene="globe" role="img" aria-label="Esfera luminosa de números en movimiento">
+              <img class="slot-poster" src="/posters/globe.png" alt="" loading="lazy" />
+              <span class="slot-state">Un momento…</span>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <header class="section-head" data-reveal>
-                    <span class="kicker">Forma de trabajo</span>
-                    <h2>Ejecucion simple, resultados concretos</h2>
-                    <p>Trabajo contigo de forma directa para definir prioridades, construir rapido y optimizar con datos de uso reales.</p>
-                </header>
-
-                <div class="step-mini-grid">
-                    <article class="step-mini card" data-reveal>
-                        <strong>1</strong>
-                        <h3>Analisis inicial</h3>
-                        <p>Mapeo cuellos de botella y detecto donde la automatizacion entrega retorno primero.</p>
-                    </article>
-                    <article class="step-mini card" data-reveal>
-                        <strong>2</strong>
-                        <h3>Arquitectura</h3>
-                        <p>Diseno flujo tecnico y experiencia de usuario para que la solucion sea adoptada por tu equipo.</p>
-                    </article>
-                    <article class="step-mini card" data-reveal>
-                        <strong>3</strong>
-                        <h3>Implementacion</h3>
-                        <p>Desarrollo, conecto sistemas, pruebo escenarios reales y documento el uso operativo.</p>
-                    </article>
-                    <article class="step-mini card" data-reveal>
-                        <strong>4</strong>
-                        <h3>Mejora continua</h3>
-                        <p>Monitoreo rendimiento, itero flujos y escalo capacidades en funcion de resultados.</p>
-                    </article>
-                </div>
-
-                <div class="cta-band" data-reveal>
-                    <p><strong>Lema:</strong> "Menos tareas repetitivas. Mas decisiones inteligentes."</p>
-                    <a class="btn btn-whatsapp" href="https://wa.me/593959186832" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
-                    </a>
-                </div>
+            <footer class="stage-footer"><p class="stage-hint">Tu próxima oportunidad está más cerca.</p><div><button class="action action--ghost" data-inspect="globe" type="button">Ver de cerca ↗</button><a class="stage-next" href="#design-atelier">Hay más por descubrir <span aria-hidden="true">↓</span></a></div></footer>
+            <div class="slot-progress" aria-hidden="true"><i></i></div>
+          </div>
+        </article>
+        <article class="story-step" id="design-atelier" data-asset="atelier" aria-labelledby="atelier-title">
+          <div class="stage-inner">
+            <header class="stage-header"><div><p class="stage-eyebrow"><span>03 / 03</span> CREACIÓN</p><h2 id="atelier-title">Tú lo imaginas.<br /><em>Le damos vida.</em></h2></div><p class="stage-description">Cuéntanos qué hace único a tu negocio. Lo convertimos en una experiencia que se sienta tuya, de principio a fin.</p></header>
+            <div class="scene-slot" data-scene="atelier" role="img" aria-label="Estudio de DevsManager con una persona creando en su escritorio">
+              <img class="slot-poster" src="/posters/atelier.png" alt="" loading="lazy" />
+              <span class="slot-state">Un momento…</span>
             </div>
-        </section>
+            <footer class="stage-footer"><p class="stage-hint">Las grandes ideas merecen cobrar vida.</p><div><button class="action action--ghost" data-inspect="atelier" type="button">Ver de cerca ↗</button><a class="stage-next" href="#capabilities-title">Lo que podemos hacer por ti <span aria-hidden="true">↓</span></a></div></footer>
+            <div class="slot-progress" aria-hidden="true"><i></i></div>
+          </div>
+        </article>
+        <noscript><p class="noscript-note">Disfruta de nuestros diseños y descubre lo que podemos hacer por tu negocio.</p></noscript>
+      </section>
+      <section class="model-library" id="coleccion" aria-labelledby="library-title">
+        <div class="library-heading"><span class="eyebrow">CADA DETALLE CUENTA</span><h2 id="library-title">Míralo más de cerca.</h2><p>Hay cosas que merecen una segunda mirada. Elige tu favorita y descubre los detalles.</p></div>
+        <div class="model-picker" id="model-picker" role="group" aria-label="Elige qué quieres ver de cerca"></div>
+      </section>
+
+      <section class="capabilities" aria-labelledby="capabilities-title">
+        <div class="section-heading" data-reveal>
+          <span>HECHO PARA TU NEGOCIO</span>
+          <h2 id="capabilities-title">Una presencia digital<br />que sí se siente propia.</h2>
+          <p>Tu negocio tiene algo que lo hace único. Hagamos que tus clientes lo vean desde el primer momento.</p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability-card capability-card--featured" data-reveal>
+            <span class="card-number">01</span><div class="card-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h3>Una web que enamora</h3><p>Muestra lo mejor de tu negocio y dale a tus clientes una razón para quedarse.</p><a href="/servicios">Quiero destacar <span>↗</span></a>
+          </article>
+          <article class="capability-card" data-reveal>
+            <span class="card-number">02</span><div class="card-glyph" aria-hidden="true">↗</div>
+            <h3>Clientes bien atendidos</h3><p>Ayuda a tus clientes a encontrar respuestas y dar el siguiente paso, incluso cuando estás ocupado.</p><a href="/servicios">Quiero saber más <span>↗</span></a>
+          </article>
+          <article class="capability-card" data-reveal>
+            <span class="card-number">03</span><div class="card-flow" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <h3>Más tiempo para crecer</h3><p>Simplifica las tareas de cada día y dedica tu energía a lo que hace especial a tu negocio.</p><a href="/servicios">Quiero simplificar mi día <span>↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-types" aria-labelledby="project-types-title">
+        <div class="project-types__intro" data-reveal><span>IMAGINA LAS POSIBILIDADES</span><h2 id="project-types-title">Tu negocio.<br />Su mejor versión.</h2></div>
+        <div class="project-list">
+          <article data-reveal><span>01</span><h3>Productos</h3><p>Que tus clientes se enamoren de cada detalle antes de tenerlo en sus manos.</p><i>DETALLES QUE ENAMORAN</i></article>
+          <article data-reveal><span>02</span><h3>Servicios</h3><p>Muestra lo que te hace diferente y haz que elegirte sea el siguiente paso.</p><i>CONFIANZA DESDE EL PRIMER MOMENTO</i></article>
+          <article data-reveal><span>03</span><h3>Espacios</h3><p>Invita a tus clientes a imaginarse allí, antes incluso de cruzar la puerta.</p><i>LUGARES QUE INVITAN A QUEDARSE</i></article>
+        </div>
+      </section>
+
+      <section class="closing-cta" aria-labelledby="closing-title">
+        <div class="closing-cta__signal" aria-hidden="true"><span></span></div>
+        <p data-reveal>¿Tienes una idea que merece verse diferente?</p>
+        <h2 id="closing-title" data-reveal>Construyamos<br />algo imposible<br />de ignorar.</h2>
+        <div class="closing-cta__actions" data-reveal>
+          <a class="action action--primary" href="https://wa.me/593959186832" target="_blank" rel="noopener">Hablar por WhatsApp <span>↗</span></a>
+          <a class="action action--ghost" href="/proceso">Conocer el proceso</a>
+        </div>
+      </section>
     </main>
 
     <div data-include="footer"></div>
-
-    <script src="assets/js/layout.js" defer></script>
-    <script src="assets/js/site.js" defer></script>
-    <script src="assets/js/home.js" defer></script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [{
-                "@type": "WebSite",
-                "@id": "https://devsmanager.netlify.app/#website",
-                "url": "https://devsmanager.netlify.app/",
-                "name": "DevsManager",
-                "inLanguage": "es-EC"
-            }, {
-                "@type": "ProfessionalService",
-                "@id": "https://devsmanager.netlify.app/#organization",
-                "name": "DevsManager",
-                "url": "https://devsmanager.netlify.app/",
-                "logo": "https://devsmanager.netlify.app/icono.png",
-                "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80",
-                "telephone": "+593959186832",
-                "email": "jefersonalvarez009@gmail.com",
-                "areaServed": "Quito, Ecuador",
-                "description": "Automatizacion, agentes de IA y sistemas web para negocios.",
-                "sameAs": [
-                    "https://wa.me/593959186832"
-                ]
-            }, {
-                "@type": "WebPage",
-                "@id": "https://devsmanager.netlify.app/#webpage",
-                "url": "https://devsmanager.netlify.app/",
-                "name": "DevsManager | IA y Automatizacion para negocios",
-                "isPartOf": {
-                    "@id": "https://devsmanager.netlify.app/#website"
-                },
-                "about": {
-                    "@id": "https://devsmanager.netlify.app/#organization"
-                },
-                "inLanguage": "es-EC"
-            }]
-        }
-    </script>
-</body>
-
+    <script type="module" src="assets/js/layout.js"></script>
+    <script type="module" src="assets/js/site.js"></script>
+    <script type="module" src="assets/js/home.js"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://devsmanager.netlify.app/#website","url":"https://devsmanager.netlify.app/","name":"DevsManager","inLanguage":"es-EC"},{"@type":"ProfessionalService","@id":"https://devsmanager.netlify.app/#organization","name":"DevsManager","url":"https://devsmanager.netlify.app/","logo":"https://devsmanager.netlify.app/icono.png","telephone":"+593959186832","email":"jefersonalvarez009@gmail.com","areaServed":"Quito, Ecuador","description":"Experiencias web 3D, automatización y agentes de IA para negocios.","sameAs":["https://wa.me/593959186832"]}]}</script>
+  </body>
 </html>

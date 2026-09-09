@@ -1,60 +1,25 @@
-const setupHeroRotation = () => {
-  const node = document.getElementById("hero-rotating-text");
-  if (!node) return;
+import { ASSETS } from './showroom-catalog.js';
 
-  const phrases = [
-    "agentes de IA",
-    "automatizaciones 24/7",
-    "sistemas web a medida",
-    "integraciones inteligentes",
-  ];
+// The three fullscreen stages are static HTML: no duplicate hero or gallery canvas.
+const chapterNav = document.createElement('nav');
+chapterNav.className = 'experience-nav';
+chapterNav.setAttribute('aria-label', 'Descubre nuestra historia');
+chapterNav.hidden = true;
+chapterNav.innerHTML = ASSETS.map((asset, index) => `<a href="#design-${asset.id}" data-chapter-link="${asset.id}"><span>${String(index + 1).padStart(2, '0')}</span> ${asset.short}</a>`).join('');
+document.body.append(chapterNav);
 
-  let index = 0;
-  setInterval(() => {
-    index = (index + 1) % phrases.length;
-    node.textContent = phrases[index];
-  }, 2400);
-};
+const picker = document.querySelector('#model-picker');
+ASSETS.forEach((asset, index) => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.dataset.inspect = asset.id;
+  button.innerHTML = `<span class="picker-number">${String(index + 1).padStart(2, '0')}</span><span><strong>${asset.label}</strong><small>VER DE CERCA</small></span><span aria-hidden="true">↗</span>`;
+  picker.append(button);
+});
 
-const setupCounters = () => {
-  const counters = Array.from(document.querySelectorAll("[data-counter]"));
-  if (!counters.length) return;
-
-  const runCounter = (el) => {
-    const target = Number(el.dataset.counter);
-    let value = 0;
-    const step = Math.max(1, Math.ceil(target / 28));
-    const timer = setInterval(() => {
-      value += step;
-      if (value >= target) {
-        value = target;
-        clearInterval(timer);
-      }
-      el.textContent = `${value}`;
-    }, 26);
-  };
-
-  if (!("IntersectionObserver" in window)) {
-    counters.forEach(runCounter);
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          runCounter(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 },
-  );
-
-  counters.forEach((counter) => observer.observe(counter));
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  setupHeroRotation();
-  setupCounters();
+import('./scene3d.js').catch(error => {
+  console.error('No se pudo iniciar el visor 3D', error);
+  document.querySelector('#scene-status-copy').textContent = 'Puedes disfrutar de las imágenes. La vista de cerca no está disponible en este momento.';
+  document.querySelectorAll('.slot-state').forEach(label => { label.hidden = false; label.textContent = 'Vista previa disponible'; });
+  document.querySelectorAll('[data-inspect]').forEach(button => { button.disabled = true; button.title = 'La vista de cerca no está disponible en este momento.'; });
 });

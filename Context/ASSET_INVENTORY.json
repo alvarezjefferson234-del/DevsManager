@@ -1,0 +1,126 @@
+[
+  {
+    "id": "logo",
+    "source": "C:\\Users\\PLAYER666\\Documents\\3d\\devsmanager_logo_premium_v03.glb",
+    "path": "D:\\DevsManager\\public\\models\\logo.glb",
+    "bytes": 2116728,
+    "size": [
+      4.929999828338623,
+      1.440000057220459,
+      0.3699999935925007
+    ],
+    "center": [
+      0,
+      0,
+      0.03499999828636646
+    ],
+    "meshes": 67,
+    "nodes": 70,
+    "images": 0,
+    "triangles": 52640,
+    "clips": [],
+    "names": [
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Pin_Left",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Pin_Lower",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Rear_Pin_1",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Rear_Pin_2",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Rear_Pin_3",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Rounded_Frame",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Silicon_Core",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Trace_Bottom",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Trace_Diagonal",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Trace_Right",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_Chip_Trace_Top",
+      "DEVS_MANAGER_PREMIUM_LOCKUP_v03_D_Continuous_Outline"
+    ],
+    "extensions": [
+      "KHR_materials_emissive_strength"
+    ],
+    "sha256": "d948d2a79e42273614ab281868851aa65fad60b20fc8324c28d0d8c3d43030e7"
+  },
+  {
+    "id": "globe",
+    "source": "C:\\Users\\PLAYER666\\Documents\\3d\\binary_globe_astra_v03.glb",
+    "path": "D:\\DevsManager\\public\\models\\globe.glb",
+    "bytes": 3869944,
+    "size": [
+      9.596564012040263,
+      8.094824757733694,
+      7.791563116019235
+    ],
+    "center": [
+      0.227261879677358,
+      -0.08345215003523743,
+      0.13442281474628093
+    ],
+    "meshes": 8,
+    "nodes": 11,
+    "images": 0,
+    "triangles": 90156,
+    "clips": [
+      {
+        "name": "GLOBE_SPIN_360_10secondsAction",
+        "channels": 1
+      }
+    ],
+    "names": [
+      "GLOBE_black_occlusion_core",
+      "GLOBE_mesh_Acid_lime_enamel",
+      "GLOBE_mesh_Electric_green",
+      "GLOBE_mesh_Lime_highlights",
+      "MATRIX_mesh_Matrix_green_0",
+      "MATRIX_mesh_Matrix_green_1",
+      "MATRIX_mesh_Matrix_green_2",
+      "MATRIX_mesh_Matrix_green_3"
+    ],
+    "extensions": [
+      "KHR_materials_specular"
+    ],
+    "sha256": "7053652e3a92b91ca435d93ebab79e77767ba4119c92280883856104ce62b0da"
+  },
+  {
+    "id": "atelier",
+    "source": "C:\\Users\\PLAYER666\\Documents\\3d\\devsmanager_atelier_v07.glb",
+    "path": "D:\\DevsManager\\public\\models\\atelier.glb",
+    "bytes": 9771316,
+    "size": [
+      1.5199999660253525,
+      1.547366832479085,
+      1.381311958084079
+    ],
+    "center": [
+      0,
+      0.773923464925808,
+      -0.02630400219918666
+    ],
+    "meshes": 39,
+    "nodes": 44,
+    "images": 4,
+    "triangles": 268484,
+    "clips": [
+      {
+        "name": "CIPHER_ATELIER_Astra",
+        "channels": 4
+      }
+    ],
+    "names": [
+      "WEB_DEVS_MANAGER_Desktop_Symbol_DEVS_MANAGER_Desktop_Symbol_Blue_Gradient_PBR",
+      "WEB_DEVS_MANAGER_Desktop_Symbol_DEVS_MANAGER_Desktop_Symbol_Dark_Anodized_Sides_PBR",
+      "WEB_DEVS_MANAGER_Desktop_Symbol_DEVS_MANAGER_Desktop_Symbol_Etched_Circuit_PBR",
+      "WEB_DEVS_MANAGER_Desktop_Symbol_DEVS_MANAGER_Desktop_Symbol_Silicon_Indigo_PBR",
+      "WEB_DEVS_MANAGER_Front_Lockup_DEVS_MANAGER_Front_Lockup_Blue_Gradient_PBR",
+      "WEB_DEVS_MANAGER_Front_Lockup_DEVS_MANAGER_Front_Lockup_Dark_Anodized_Sides_PBR",
+      "WEB_DEVS_MANAGER_Front_Lockup_DEVS_MANAGER_Front_Lockup_Etched_Circuit_PBR",
+      "WEB_DEVS_MANAGER_Front_Lockup_DEVS_MANAGER_Front_Lockup_Recessed_Graphite_PBR",
+      "WEB_DEVS_MANAGER_Front_Lockup_DEVS_MANAGER_Front_Lockup_Silicon_Indigo_PBR",
+      "WEB_HAND_LEFT_HAND_LEFT_Natural_Skin_COLOR0_PBR",
+      "WEB_HAND_LEFT_HAND_LEFT_Thin_Natural_Nails_COLOR0_PBR",
+      "WEB_HAND_RIGHT_HAND_RIGHT_Natural_Skin_COLOR0_PBR"
+    ],
+    "extensions": [
+      "KHR_materials_specular",
+      "KHR_materials_ior"
+    ],
+    "sha256": "1ad77c6e54ef2b8b85a8cf023cdb9965b4779e9f1d4fc34565784b894097b5f0"
+  }
+]
