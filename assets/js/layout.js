@@ -1,6 +1,9 @@
+import headerHtml from "../../partials/header.html?raw";
+import footerHtml from "../../partials/footer.html?raw";
+
 const PARTIALS = {
-  header: "/partials/header.html",
-  footer: "/partials/footer.html",
+  header: headerHtml,
+  footer: footerHtml,
 };
 
 const includePartials = async () => {
@@ -9,20 +12,9 @@ const includePartials = async () => {
   await Promise.all(
     targets.map(async (target) => {
       const key = target.getAttribute("data-include");
-      const source = PARTIALS[key];
-      if (!source) return;
-
-      try {
-        const response = await fetch(source, { cache: "no-store" });
-        if (!response.ok) {
-          throw new Error(`No se pudo cargar ${source}`);
-        }
-        const html = await response.text();
-        target.outerHTML = html;
-      } catch (error) {
-        target.outerHTML = "";
-        console.error(error);
-      }
+      const html = PARTIALS[key];
+      if (!html) return;
+      target.outerHTML = html;
     }),
   );
 };
